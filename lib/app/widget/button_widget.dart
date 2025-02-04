@@ -38,7 +38,7 @@ class Button extends StatelessWidget {
         alignment: Alignment.center,
         padding: EdgeInsets.symmetric(vertical: paddingY ?? 13.5),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(borderRadius ?? 8),
+          borderRadius: BorderRadius.circular(borderRadius ?? 25),
           color: color ?? Constants.get.primaryColor,
           border: Border.all(
             color: borderColor ?? Colors.transparent,

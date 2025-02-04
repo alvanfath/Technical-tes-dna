@@ -35,6 +35,9 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Poppins',
         useMaterial3: true,
         scaffoldBackgroundColor: const Color(0xEFFFFFFF),
+        appBarTheme: AppBarTheme(
+          color: Colors.white,
+        )
       ),
     );
   }

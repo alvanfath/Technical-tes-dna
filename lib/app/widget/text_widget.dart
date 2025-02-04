@@ -8,6 +8,7 @@ class TextWidget extends StatelessWidget {
   final TextAlign align;
   final int? maxLines;
   final TextOverflow? overflow;
+  final FontStyle? fontStyle;
   const TextWidget({
     super.key,
     required this.text,
@@ -17,6 +18,7 @@ class TextWidget extends StatelessWidget {
     this.align = TextAlign.start,
     this.maxLines,
     this.overflow,
+    this.fontStyle,
   });
 
   @override
@@ -31,6 +33,7 @@ class TextWidget extends StatelessWidget {
         color: color,
         fontFamily: 'Poppins',
         decoration: TextDecoration.none,
+        fontStyle: fontStyle ?? FontStyle.normal,
       ),
       textAlign: align,
     );

@@ -5,6 +5,7 @@ import 'package:heroicons/heroicons.dart';
 import 'package:technical_test_dna/app/modules/home/views/home_component.dart';
 import 'package:technical_test_dna/app/modules/home/views/home_screen.dart';
 import 'package:technical_test_dna/app/modules/home/views/profile_screen.dart';
+import 'package:technical_test_dna/app/routes/app_pages.dart';
 
 import '../controllers/home_controller.dart';
 
@@ -38,6 +39,8 @@ class HomeView extends GetView<HomeController> {
                 FloatingActionButtonLocation.centerDocked,
             bottomNavigationBar: bottomBuilder(context),
           ),
+
+          //overlay
           if (controller.isOverlay.value) ...[
             overlayBuilder(context),
           ]
@@ -64,7 +67,9 @@ class HomeView extends GetView<HomeController> {
               child: MenuComponenet(
                 title: 'Registrasi',
                 icon: HeroIcons.documentArrowUp,
-                onTap: () {},
+                onTap: () {
+                  Get.toNamed(Routes.REGISTER);
+                },
               ),
             ),
             const SizedBox(height: 12),

@@ -4,12 +4,10 @@ import 'package:get/get.dart';
 import 'package:technical_test_dna/app/helper/helper.dart';
 
 class HomeController extends GetxController {
-  //TODO: Implement HomeController
-
   //variable untuk realtime jam menit detik
   final RxString currentDate = DateTime.now().toString().obs;
   final RxString currentTime = ''.obs;
-  late Timer _timer;
+  late Timer timer;
 
   final isOverlay = false.obs;
   final menuSelected = 1.obs;
@@ -25,7 +23,7 @@ class HomeController extends GetxController {
   }
 
   void _startClock() {
-    _timer = Timer.periodic(Duration(seconds: 1), (timer) {
+    timer = Timer.periodic(Duration(seconds: 1), (timer) {
       DateTime now = DateTime.now();
       currentDate.value = DateFormatHelper.dateFormat(
         tanggal: DateTime.now().toString(),
@@ -40,7 +38,7 @@ class HomeController extends GetxController {
 
   @override
   void onClose() {
-    _timer.cancel();
+    // _timer.cancel();
     super.onClose();
   }
 }

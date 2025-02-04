@@ -14,12 +14,12 @@ class AppPages {
 
   static final routes = [
     GetPage(
-      name: _Paths.HOME,
+      name: Routes.HOME,
       page: () => const HomeView(),
       binding: HomeBinding(),
     ),
     GetPage(
-      name: _Paths.REGISTER,
+      name: Routes.REGISTER,
       page: () => const RegisterView(),
       binding: RegisterBinding(),
     ),
